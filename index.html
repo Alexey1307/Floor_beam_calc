@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="vue.js"></script> <!-- Подключена версия для разработки - с предупреждениями для отладки, поменяй позже на версию
+для production - vue.min.js-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<title>Расчет балки перекрытия</title>
+	<link rel="icon" type="images" href="images/calc.png">
+</head>
+<body>
+	<nav class="navbar"> <!-- flexbox container -->
+		<div class="flex_1"> <!-- flexbox element -->
+			<img src="images/calc.png">	
+			<a id="a_1" href="https://www.calc.ru/">Калькулятор</a>
+		</div>
+		<div class="flex_2"> <!-- flexbox element -->
+			<input id="input" type="text" name="noname" placeholder="введите что хотите посчитать (нвпример: 5000 евро в рублях)">
+			<button id="button_1">Найти</button>
+		</div>
+		<div class="flex_3">	
+			<p>cправочный портал</p>
+		</div>
+		<div class="flex_4">
+			<p>Расчет балки перекрытия, онлайн калькулятор </p>
+			<p><span>Расчет балки перекрытия, онлайн калькулятор</span> позволит вам рассчитать предельную нагрузку на деревянные балки перекрытия дома, чтобы подобрать оптимальные размеры, шаг и материал балок.</p>
+		</div>
+	</nav>
+	<main class="main">
+		<div class="flex_5">
+			<div class="main_1">
+				<p>Материал древесины: </p>
+				<p>Пролёт: </p>
+				<p>Размеры балок: </p>
+				<p>Шаг балок: </p>
+			</div>
+			<div class="main_2">
+				<input type="text" name="">
+				<input type="text" name="">
+				<input type="text" name="">
+				<input type="text" name="">
+			</div>
+		</div>
+	</main>
+	<div class="flex_6">
+		<button class="button_2">Расчет нагрузки на балку</button> 
+	</div>
+	<footer class="footer">
+		<a href="#">Мобильная версия</a>
+		<a href="#">Калькуляторы</a>
+		<a href="#">Справочник</a>
+		<a href="#">Избранное</a>
+		<a href="#">Контакты</a>
+		<a href="#">Информеры</a>
+		<a href="#">Оповещения</a>
+		<a href="#">Cookies</a>
+	</footer>
+
+<script type="text/javascript" src="main.js"></script>	
+</body>
+</html>
