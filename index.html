@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="vue.js"></script> <!-- Подключена версия для разработки - с предупреждениями для отладки, поменяй позже на версию
-для production - vue.min.js-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="UTF-8">
 	<title>Расчет балки перекрытия</title>
 	<link rel="icon" type="images" href="images/calc.png">
+	<style>
+		@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+	</style>
 </head>
 <body>
 	<nav class="navbar"> <!-- flexbox container -->
@@ -15,7 +16,7 @@
 			<a id="a_1" href="https://www.calc.ru/">Калькулятор</a>
 		</div>
 		<div class="flex_2"> <!-- flexbox element -->
-			<input id="input" type="text" name="noname" placeholder="введите что хотите посчитать (нвпример: 5000 евро в рублях)">
+			<input id="input" type="text" name="noname" placeholder="введите что хотите посчитать (например: 5000 евро в рублях)">
 			<button id="button_1">Найти</button>
 		</div>
 		<div class="flex_3">	
@@ -35,10 +36,30 @@
 				<p>Шаг балок: </p>
 			</div>
 			<div class="main_2">
-				<input type="text" name="">
-				<input type="text" name="">
-				<input type="text" name="">
-				<input type="text" name="">
+				<div id="app">
+					<form>
+						<select v-on:click='show = !show'>
+							<option value="1">Сосна</option> <!-- коэф 1 -->
+							<option value="2">Лиственница</option> <!-- коэф 1.36 -->
+							<option value="3">Ель</option> <!-- коэф 1.27 -->
+							<option value="4" disabled>Красное дерево</option>
+						</select>	
+					</form>
+				</div>
+				<div>
+					<input type="text" placeholder="500">
+					<span>см</span>
+				</div>
+				<div class="size">
+					<input type="text" placeholder="50">
+					<span>x</span>
+					<input type="text" placeholder="150">
+					<span>мм</span>
+				</div>
+				<div>
+					<input type="text" placeholder="60">
+					<span>см</span>
+				</div>
 			</div>
 		</div>
 	</main>
@@ -55,7 +76,9 @@
 		<a href="#">Оповещения</a>
 		<a href="#">Cookies</a>
 	</footer>
-
-<script type="text/javascript" src="main.js"></script>	
+	
+	<script src="vue.js"></script> <!-- Подключена версия для разработки - с предупреждениями для отладки, поменяй позже на версию
+	для production - vue.min.js-->
+	<script type="text/javascript" src="main.js"></script>	
 </body>
 </html>
